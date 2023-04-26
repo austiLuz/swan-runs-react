@@ -1,0 +1,94 @@
+/* routes.css */
+
+.routes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    font-family: var(--font-family);
+    margin-bottom: 2rem;
+  }
+  
+  .routes-container img {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  
+  .buttons-container {
+    display: flex;
+    flex-wrap: wrap; /* Added flex-wrap to allow buttons to wrap to next line on small screens */
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+  }
+  
+  .button {
+    margin: 10px;
+    padding: 20px 40px;
+    background-color: #f4b183;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #c66f02;
+    transform: scale(1.1);
+  }
+  
+  .button:hover::before {
+    top: -50%;
+    left: -50%;
+  }
+  
+  /* Media query for small screens */
+  @media (max-width: 768px) {
+    .routes-container img {
+      width: 100%; /* Set image width to 100% on small screens */
+      height: auto; /* Reset image height to auto on small screens */
+      position: relative; /* Reset image position to relative on small screens */
+      left: auto; /* Reset image left position to auto on small screens */
+      transform: none; /* Reset image transform on small screens */
+    }
+  
+    .buttons-container {
+      align-items: center; /* Center buttons vertically on small screens */
+    }
+  
+    .button {
+      padding: 15px 30px; /* Decrease padding for smaller buttons on small screens */
+      font-size: 18px; /* Decrease font size for smaller buttons on small screens */
+    }
+  }
+  

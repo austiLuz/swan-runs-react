@@ -1,0 +1,54 @@
+/* Style for the carousel container */
+.carousel {
+    margin: 0 auto;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Style for the carousel slides */
+  .carousel .slide {
+    background: #f8f8f800;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Style for the carousel slide images */
+  .carousel .slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  
+  /* Style for the carousel legends (captions) */
+  .carousel .legend {
+    color: #fdfafa;
+    font-size: 18px;
+    margin-top: 10px;
+    width: auto;
+    background-color: transparent;
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  /* Responsive styles for mobile */
+  @media (max-width: 768px) {
+    .carousel {
+      height: 300px;
+    }
+  
+    .carousel .slide {
+      height: 300px;
+    }
+  
+    .carousel .legend {
+      font-size: 14px;
+      padding: 5px;
+    }
+  }
+  

@@ -1,0 +1,118 @@
+.swan__header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.swan__header-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: left;
+}
+
+.swan__header-flex {
+  display: flex;
+  flex-direction: column; /* Change to column direction to stack items vertically */
+  gap: 2rem; /* Add spacing between the two columns */
+}
+
+.swan__header-content h1 {
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 90px;
+  line-height: 75px;
+  letter-spacing: -0.04em;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.swan__header-content h2{
+  font-family: var(--font-family);
+  padding-top: 2rem;
+  margin: 2rem;
+  font-size: 30px;
+  color: var(--gradient-text);
+  text-align: left;
+}
+
+.swan__header-content p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 25px;
+  color: var(--color-text);
+  margin: 2rem;
+}
+
+.swan__header-content ul {
+  margin-top: 1rem;
+  font-family: var(--font-family);
+  font-size: 30px;
+  list-style-type: none;
+  text-align: center;
+}
+
+.swan__header-content a{
+  text-decoration: underline;
+}
+
+.swan__header-content a:hover {
+  color: rgb(23, 189, 14);
+  text-decoration: underline;
+}
+
+.swan__header-content li {
+  font-family: var(--font-family);
+  font-size: 25px;
+  line-height: 15px;
+  padding: 1.5rem;
+  color: var(--color-text);
+  margin-top: 1.5rem;
+}
+
+.swan__header-image img {
+  width: 100%;
+  height: 350px; /* Remove !important to allow height to be determined by content */
+  object-fit: cover; /* Add object-fit: cover to ensure the image covers the entire area */
+}
+
+
+@media screen and (max-width: 1050px) {
+  .swan__header-content {
+    margin: 0 0 3rem;
+  }
+  .swan__header-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .swan__header p {
+    font-size: 14px; /* Update font size for smaller screens */
+    line-height: 25px; /* Update line height for smaller screens */
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .swan__header h1 {
+    font-size: 36px; /* Update font size for smaller screens */
+    line-height: 48px; /* Update line height for smaller screens */
+  }
+  .swan__header p {
+    font-size: 14px; /* Update font size for smaller screens */
+    line-height: 20px; /* Update line height for smaller screens */
+  }
+  .swan__header-content ul {
+    font-size: 20px; /* Update font size for smaller screens */
+  }
+  .swan__header-content li {
+    font-size: 14px;
+    line-height: 18px; /* Update line height for smaller screens */
+    padding: 0.5rem;
+  }
+}
